@@ -1,0 +1,84 @@
+[
+  {
+    "Id": "101",
+    "Family": "Demo Pipe",
+    "System": "Supply",
+    "Boundary": false,
+    "Ports": [
+      {
+        "Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "Bore": 50,
+        "Direction": {
+          "X": -1,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "Position": {
+          "X": 1000,
+          "Y": 0,
+          "Z": 0
+        },
+        "Bore": 50,
+        "Direction": {
+          "X": 1,
+          "Y": 0,
+          "Z": 0
+        }
+      }
+    ],
+    "Neighbors": [],
+    "Instance": {
+      "Body Material": "CI"
+    },
+    "Type": {
+      "Description": "DN50 pipe"
+    }
+  },
+  {
+    "Id": "201",
+    "Family": "Demo Pipe",
+    "System": "Supply",
+    "Boundary": false,
+    "Ports": [
+      {
+        "Position": {
+          "X": 0,
+          "Y": 500,
+          "Z": 0
+        },
+        "Bore": 50,
+        "Direction": {
+          "X": -1,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "Position": {
+          "X": 1000,
+          "Y": 500,
+          "Z": 0
+        },
+        "Bore": 50,
+        "Direction": {
+          "X": 1,
+          "Y": 0,
+          "Z": 0
+        }
+      }
+    ],
+    "Neighbors": [],
+    "Instance": {
+      "Body Material": "CI"
+    },
+    "Type": {
+      "Description": "DN50 pipe"
+    }
+  }
+]

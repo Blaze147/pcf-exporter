@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Groups": [
+    {
+      "Name": "Example pipe families",
+      "Families": [
+        "Demo Pipe"
+      ],
+      "Mappings": {
+        "ComponentType": {
+          "Source": "Constant",
+          "Parameter": "",
+          "Constant": "PIPE",
+          "RequireTranslation": false,
+          "Translations": {}
+        },
+        "Description": {
+          "Source": "Type",
+          "Parameter": "Description",
+          "Constant": "",
+          "RequireTranslation": false,
+          "Translations": {}
+        },
+        "Material": {
+          "Source": "Instance",
+          "Parameter": "Body Material",
+          "Constant": "",
+          "RequireTranslation": true,
+          "Translations": {
+            "CI": "Cast iron",
+            "BR": "Brass"
+          }
+        }
+      }
+    }
+  ]
+}

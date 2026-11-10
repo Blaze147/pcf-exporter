@@ -1,0 +1,10 @@
+using PcfExporter.Core;
+using System.Text.Json;
+var output=Path.GetFullPath(args.FirstOrDefault()??"samples");Directory.CreateDirectory(output);
+var config=new Configuration{Groups=[new(){Name="Example pipe families",Families=["Demo Pipe"],Mappings=new(){["ComponentType"]=new(){Constant="PIPE"},["Description"]=new(){Source="Type",Parameter="Description"},["Material"]=new(){Source="Instance",Parameter="Body Material",RequireTranslation=true,Translations=new(){{"CI","Cast iron"},{"BR","Brass"}}}}}]};
+ModelElement Pipe(string id,double y,string[] adjacent)=>new(){Id=id,Family="Demo Pipe",System="Supply",Neighbors=adjacent.ToHashSet(),Ports=[new(new(0,y,0),50,new(-1,0,0)),new(new(1000,y,0),50,new(1,0,0))],Instance=new(){{"Body Material","CI"}},Type=new(){{"Description","DN50 pipe"}}};
+var model=new[]{Pipe("101",0,[]),Pipe("201",500,[])};
+new ConfigurationStore(Path.Combine(output,"pcf-mappings.example.json")).Save(config);
+File.WriteAllText(Path.Combine(output,"model.example.json"),JsonSerializer.Serialize(model,ConfigurationStore.Options));
+foreach(var (file,text) in PcfWriter.Plan(NetworkDiscovery.Discover(model),config,false))File.WriteAllText(Path.Combine(output,file),text);
+Console.WriteLine($"Wrote mapping, fake model, and combined PCF to {output}");

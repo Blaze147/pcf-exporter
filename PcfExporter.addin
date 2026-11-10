@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><RevitAddIns><AddIn Type="Application"><Name>PCF Exporter</Name><Assembly>PcfExporter/PcfExporter.Revit.dll</Assembly><AddInId>493EA1F1-BC02-4A2B-929B-6DA034C924C5</AddInId><FullClassName>PcfExporter.Revit.App</FullClassName><VendorId>PCFE</VendorId><VendorDescription>Standalone PCF Exporter</VendorDescription></AddIn></RevitAddIns>
